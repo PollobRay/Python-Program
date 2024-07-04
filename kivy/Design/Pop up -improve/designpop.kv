@@ -1,0 +1,66 @@
+<Windgets>
+    GridLayout:
+        cols:1
+        Label:
+            id:superlabel
+            text:'Hello'
+        Button:
+            text:'Press'
+            id:btn1
+            on_release:root.btn()
+
+<PopWidget>
+    cols:1
+
+    GridLayout:
+        cols:2
+        Label:
+            text:'Course Name :'
+        TextInput:
+
+    GridLayout:
+        cols:2
+        Label:
+            text:'Course Code :'
+        TextInput:
+
+    GridLayout:
+        cols:2
+        Label:
+            text:'Select Teacher :'
+        Spinner:
+            id:teachers
+            text:"select"
+            values:['Prof. Dr. Md. Obaidur Rahman','Prof. Dr. Fazlul Hasan Siddiqui','Mst. Sumaya Khatun','Md. Abu Bakkar Siddique']
+
+    GridLayout:
+        cols:2
+        Label:
+            text:'Select ClassRoom :'
+
+        Spinner:
+            id:rooms
+            text:"select"
+            values:['7019 A','7019 B']
+
+    GridLayout:
+        cols:4
+
+        CheckBox:
+            id:Select
+            active: False
+
+        Label:
+            text:'Lab Class'
+
+        Label:
+            text:'Periods :'
+
+        TextInput:
+            id:inputT
+            text:'1'
+            disabled: not Select.active
+
+    Button:
+        text:'Click'
+        on_release:root.press_btn(root.ids.inputT)

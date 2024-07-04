@@ -1,0 +1,25 @@
+<MyLayout>
+    do_default_tab:False
+    size_hint:0.5,0.5
+    pos_hint:{'center_x':0.5,'center_y':0.5}
+    tab_pos:'top_mid'
+
+    TabbedPanelItem:
+        text:'tab 1'
+        Label:
+            text:'Hello'
+            font_size:32
+    TabbedPanelItem:
+        text:'tab 2'
+        Label:
+            text:'World'
+            font_size:32
+
+    TabbedPanelItem:
+        text:'tab 3'
+        BoxLayout:
+            orientation:'vertical'
+            Label:
+                text:'Press the button'
+            Button:
+                text:'click me'

@@ -1,0 +1,15 @@
+
+MDBoxLayout:
+    orientation:'vertical'
+
+    MDScreen:
+        MDRectangleFlatButton:
+            text:'Alert'
+            pos_hint:{'center_x':0.5,'center_y':0.5}
+            on_release:app.show_alert_dialog()
+
+
+        MDLabel:
+            id:my_label
+            text:'Some stuff'
+            pos_hint:{'center_x':0.95,'center_y':0.4}

@@ -1,0 +1,13 @@
+<MyLayout>
+    BoxLayout:
+        orientation:'vertical'
+        size:root.width,root.height
+        Label:
+            text:'Label'
+
+        TextInput:
+            id:texti
+            on_touch_down:root.set_focus(self,'down')
+            on_touch_up:root.set_focus(self,'up')
+            on_touch_move:root.set_focus(self,'move')
+            #readonly:True #to make not ediable
